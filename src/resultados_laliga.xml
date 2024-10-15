@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE liga [
+        <!ELEMENT liga (jornada+)>
+        <!ELEMENT jornada (partido+)>
+        <!ELEMENT partido (local, visitante, resultado, goles, fecha, estadio)>
+        <!ELEMENT local (#PCDATA)>
+        <!ELEMENT visitante (#PCDATA)>
+        <!ELEMENT resultado (#PCDATA)>
+        <!ELEMENT goles (gol+)>
+        <!ELEMENT gol (jugador, minuto)>
+        <!ELEMENT jugador (#PCDATA)>
+        <!ELEMENT minuto (#PCDATA)>
+        <!ELEMENT fecha (#PCDATA)>
+        <!ELEMENT estadio (#PCDATA)>
+        ]>
+<liga>
+    <jornada>
+        <partido>
+            <local>Barcelona</local>
+            <visitante>Real Madrid</visitante>
+            <resultado>2-1</resultado>
+            <goles>
+                <gol>
+                    <jugador>Lewandowski</jugador>
+                    <minuto>23</minuto>
+                </gol>
+                <gol>
+                    <jugador>Vinícius Jr.</jugador>
+                    <minuto>45</minuto>
+                </gol>
+                <gol>
+                    <jugador>Gavi</jugador>
+                    <minuto>89</minuto>
+                </gol>
+            </goles>
+            <fecha>2024-10-10</fecha>
+            <estadio>Camp Nou</estadio>
+        </partido>
+        <partido>
+            <local>Atletico Madrid</local>
+            <visitante>Sevilla</visitante>
+            <resultado>3-0</resultado>
+            <goles>
+                <gol>
+                    <jugador>Griezmann</jugador>
+                    <minuto>12</minuto>
+                </gol>
+                <gol>
+                    <jugador>Morata</jugador>
+                    <minuto>50</minuto>
+                </gol>
+                <gol>
+                    <jugador>Koke</jugador>
+                    <minuto>78</minuto>
+                </gol>
+            </goles>
+            <fecha>2024-10-10</fecha>
+            <estadio>Wanda Metropolitano</estadio>
+        </partido>
+    </jornada>
+</liga>
+
+        <!--
+    Explicación del codigo:
+
+    El elemento raíz es liga, que contiene uno o más elementos jornada.
+    Cada jornada contiene uno o más elementos partido.
+    Los elementos local, visitante, resultado, fecha, y estadio son de tipo texto (#PCDATA).
+    El elemento goles contiene uno o más elementos gol, y cada gol tiene un jugador y un minuto.
+
+         -->
